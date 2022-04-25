@@ -1,4 +1,4 @@
-export default Add = () => {
+export const Add = () => {
   return `
       <h2 class="text-center">Add a new book</h2>
       <form action="#" id="book-form" class="text-center w-half mx-auto">

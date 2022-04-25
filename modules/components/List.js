@@ -1,4 +1,4 @@
-export default List = () => {
+export const List = () => {
   const page = `
       <h1 class="text-center">All Awesome Books</h1>
       <div class="px-5 mt-2">

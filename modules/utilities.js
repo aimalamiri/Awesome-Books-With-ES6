@@ -1,4 +1,4 @@
-insertBookIntoDom = (book, booksList) => {
+export const insertBookIntoDom = (book, booksList) => {
   const bookElement = `
       <li class="book">
         <div><strong>"${book.title}"</strong> by ${book.author}</div>
@@ -7,5 +7,3 @@ insertBookIntoDom = (book, booksList) => {
   const bookChild = document.createRange().createContextualFragment(bookElement);
   booksList.appendChild(bookChild);
 }
-
-export {insertBookIntoDom}

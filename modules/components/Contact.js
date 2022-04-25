@@ -1,4 +1,4 @@
-export default Contact = () => {
+export const Contact = () => {
   const page = `
       <h1 class="text-center">Contact Information</h1>
       <div class="px-5 mt-2 mx-auto w-half">

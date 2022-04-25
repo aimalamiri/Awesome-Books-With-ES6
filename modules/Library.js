@@ -1,4 +1,4 @@
-import {insertBookIntoDom} from './utilties.js';
+import {insertBookIntoDom} from './utilities.js';
 
 export default class Library {
   constructor() {

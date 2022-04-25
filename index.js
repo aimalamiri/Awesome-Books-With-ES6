@@ -1,8 +1,8 @@
-import Book from './Book.js';
-import Library from './Library.js';
-import list from './components/List.js';
-import add from './components/Add.js';
-import contact from './components/Contact.js';
+import Book from './modules/Book.js';
+import Library from './modules/Library.js';
+import {List} from './modules/components/List.js';
+import {Add} from './modules/components/Add.js';
+import {Contact} from './modules/components/Contact.js';
 
 const app = document.querySelector('#app');
 const dateTime = document.querySelector('#date-time');
@@ -11,7 +11,7 @@ const library = new Library();
 
 function loadBooks() {
   app.innerHTML = '';
-  const listElement = document.createRange().createContextualFragment(list(library));
+  const listElement = document.createRange().createContextualFragment(List(library));
   app.append(listElement);
   const booksList = document.querySelector('#book-list');
   booksList.innerHTML = '';
@@ -52,11 +52,11 @@ document.addEventListener('click', (e) => {
         loadBooks();
         break;
       case '/add':
-        app.innerHTML = add();
+        app.innerHTML = Add();
         addBook();
         break;
       case '/contact':
-        app.innerHTML = contact();
+        app.innerHTML = Contact();
         break;
       default:
         loadBooks();
