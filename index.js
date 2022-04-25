@@ -10,7 +10,7 @@ const dateTime = document.querySelector('#date-time');
 
 const library = new Library();
 
-function loadBooks() {
+const loadBooks = () => {
   app.innerHTML = '';
   const listElement = document.createRange().createContextualFragment(List(library));
   app.append(listElement);
@@ -31,7 +31,7 @@ document.addEventListener('click', (e) => {
 
 dateTime.textContent = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 
-function addBook() {
+const addBook = () => {
   const bookForm = document.querySelector('#book-form');
   const bookTitle = document.querySelector('#book-title');
   const bookAuthor = document.querySelector('#book-author');
