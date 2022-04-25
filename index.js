@@ -1,9 +1,9 @@
-import { DateTime } from "./modules/libraries/luxon.min.js";
+import { DateTime } from './modules/libraries/luxon.min.js';
 import Book from './modules/Book.js';
 import Library from './modules/Library.js';
-import {List} from './modules/components/List.js';
-import {Add} from './modules/components/Add.js';
-import {Contact} from './modules/components/Contact.js';
+import List from './modules/components/List.js';
+import Add from './modules/components/Add.js';
+import Contact from './modules/components/Contact.js';
 
 const app = document.querySelector('#app');
 const dateTime = document.querySelector('#date-time');
@@ -17,7 +17,7 @@ const loadBooks = () => {
   const booksList = document.querySelector('#book-list');
   booksList.innerHTML = '';
   library.load(booksList);
-}
+};
 
 window.addEventListener('load', () => {
   loadBooks();
@@ -43,7 +43,7 @@ const addBook = () => {
     bookTitle.value = '';
     bookAuthor.value = '';
   });
-}
+};
 
 document.addEventListener('click', (e) => {
   const link = e.target.getAttribute('data-link');
