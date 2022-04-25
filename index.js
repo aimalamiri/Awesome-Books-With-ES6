@@ -1,3 +1,4 @@
+import { DateTime } from "./modules/libraries/luxon.min.js";
 import Book from './modules/Book.js';
 import Library from './modules/Library.js';
 import {List} from './modules/components/List.js';
@@ -28,7 +29,7 @@ document.addEventListener('click', (e) => {
   library.removeBook(id, booksList);
 });
 
-dateTime.textContent = new Date().toLocaleString();
+dateTime.textContent = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 
 function addBook() {
   const bookForm = document.querySelector('#book-form');
